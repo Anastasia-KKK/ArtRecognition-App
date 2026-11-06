@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пользователи — Админ-панель</title>
+  <link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Администратор</h2>
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html">Главная</a></li>
+        <li><a href="admin-users.html" class="active">Пользователи</a></li>
+        <li><a href="admin-analytics.html">Аналитика</a></li>
+        <li><a href="admin-login.html">Выход</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+ <main class="content">
+  <div class="users-header">
+    <h1>Управление пользователями</h1>
+    <a href="admin-add-user.html" class="btn add-user">+ Добавить пользователя</a>
+  </div>
+
+  <section class="table-block">
+    <h2>Пользователи</h2>
+    <table class="user-table" id="usersTable">
+      <thead>
+        <tr><th>ID</th><th>Имя</th><th>Email</th><th>Роль</th><th>Действия</th></tr>
+      </thead>
+      <tbody><tr><td colspan="5">Загрузка...</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="table-block">
+    <h2>Модераторы</h2>
+    <table class="user-table" id="moderatorsTable">
+      <thead>
+        <tr><th>ID</th><th>Имя</th><th>Email</th><th>Роль</th><th>Действия</th></tr>
+      </thead>
+      <tbody><tr><td colspan="5">Загрузка...</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="table-block">
+    <h2>Администраторы</h2>
+    <table class="user-table" id="adminsTable">
+      <thead>
+        <tr><th>ID</th><th>Имя</th><th>Email</th><th>Роль</th><th>Действия</th></tr>
+      </thead>
+      <tbody><tr><td colspan="5">Загрузка...</td></tr></tbody>
+    </table>
+  </section>
+</main>
+
+  <script src="./static/admin-users.js"></script>
+</body>
+</html>

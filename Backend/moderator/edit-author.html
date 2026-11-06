@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Редактировать автора</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="dashboard-dark">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="avatar"></div>
+      <div class="moderator-info">
+        <h3>Модератор</h3>
+        <p id="moderatorName">—</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="side-btn">Назад</a>
+      <button class="side-btn logout-btn">Выйти</button>
+    </nav>
+  </aside>
+
+  <!-- Контент -->
+  <main class="dashboard-content">
+    <div class="upload-container">
+      <h1>Редактировать автора</h1>
+      <p class="upload-subtitle">Измените данные об авторе и сохраните изменения</p>
+
+      <form id="editAuthorForm" class="upload-form">
+        <div class="upload-fields">
+
+          <label>
+            Имя автора
+            <input type="text" id="name" placeholder="Введите имя автора" />
+          </label>
+
+          <label>
+            Имя (EN)
+            <input type="text" id="name_en" placeholder="Name in English" />
+          </label>
+
+          <label>
+            Годы жизни
+            <input type="text" id="years_of_life" placeholder="Например: 1452–1519" />
+          </label>
+
+          <label>
+            Биография
+            <textarea id="biography" placeholder="Введите краткую биографию..."></textarea>
+          </label>
+
+          <label>
+            Biography (EN)
+            <textarea id="biography_en" placeholder="Biography in English..."></textarea>
+          </label>
+
+          <label>
+            Интересные факты
+            <input type="text" id="fact1" placeholder="Факт 1" />
+            <input type="text" id="fact2" placeholder="Факт 2" />
+            <input type="text" id="fact3" placeholder="Факт 3" />
+          </label>
+
+          <label>
+            Interesting facts (EN)
+            <input type="text" id="fact1_en" placeholder="Fact 1" />
+            <input type="text" id="fact2_en" placeholder="Fact 2" />
+            <input type="text" id="fact3_en" placeholder="Fact 3" />
+          </label>
+
+          <label>
+            Ссылка на портрет
+            <input type="url" id="portrait_url" placeholder="https://example.com/portrait.jpg" />
+          </label>
+
+        </div>
+
+        <button type="submit" class="publish-btn">Сохранить изменения</button>
+        <p id="message" class="form-message"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="scripts/edit-author.js"></script>
+</body>
+</html>

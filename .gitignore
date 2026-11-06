@@ -1,0 +1,61 @@
+
+# ==========================================
+# Python / FastAPI
+# ==========================================
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Environment variables / Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ==========================================
+# User uploads
+# ==========================================
+uploads/
+
+# ==========================================
+# PostgreSQL
+# ==========================================
+*.sql
+*.dump
+*.backup
+
+# Allow sanitized demo database files
+!demo.sql
+
+# ==========================================
+# Xcode / Swift
+# ==========================================
+.DS_Store
+DerivedData/
+.build/
+.swiftpm/xcode/package.xcworkspace/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+logs/
+
+# ==========================================
+# IDE
+# ==========================================
+.vscode/
+.idea/

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Аналитика контента — Админ-панель</title>
+  <link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Администратор</h2>
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html">Главная</a></li>
+        <li><a href="admin-users.html">Пользователи</a></li>
+        <li><a href="admin-analytics.html">Аналитика</a></li>
+        <li><a href="admin-login.html">Выход</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <div class="analytics-header">
+      <h1>Аналитика контента</h1>
+      <p class="analytics-subtitle">Общая статистика по авторам, картинам и предпочтениям пользователей</p>
+    </div>
+
+    <section class="table-block">
+      <h2>Количество картин у каждого художника</h2>
+      <table class="user-table" id="artistsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Художник</th>
+            <th>Количество картин</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="3">Загрузка...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="table-block">
+      <h2>Самые популярные картины (по добавлениям в избранное)</h2>
+      <table class="user-table" id="popularArtworksTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Название картины</th>
+            <th>Автор</th>
+            <th>Количество добавлений</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4">Загрузка...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="table-block">
+      <h2>Самые популярные художники (по добавлениям их картин в избранное)</h2>
+      <table class="user-table" id="popularAuthorsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Художник</th>
+            <th>Количество добавлений</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="3">Загрузка...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="static/admin-analytics.js"></script>
+</body>
+</html>

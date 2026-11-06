@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Добавить пользователя — Админ-панель</title>
+  <link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Администратор</h2>
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html">Главная</a></li>
+        <li><a href="admin-users.html" class="active">Пользователи</a></li>
+        <li><a href="admin-analytics.html">Аналитика</a></li>
+        <li><a href="admin-login.html">Выход</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+ <main class="content">
+  <div class="upload-container">
+    <h1>Добавить нового пользователя</h1>
+    <p class="upload-subtitle">
+      Заполните поля, чтобы создать нового пользователя в системе
+    </p>
+
+    <form class="upload-fields" id="addUserForm">
+      <label>
+        Имя
+        <input type="text" name="name" placeholder="Введите имя" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="Введите email" required />
+      </label>
+
+      <label>
+        Пароль
+        <input type="password" name="password" placeholder="Введите пароль" required />
+      </label>
+
+      <label>
+        Роль
+        <select name="role" required>
+          <option value="">Выберите роль</option>
+          <option value="Пользователь">Пользователь</option>
+          <option value="Модератор">Модератор</option>
+          <option value="Администратор">Администратор</option>
+        </select>
+      </label>
+
+      <button type="submit" class="publish-btn">Добавить пользователя</button>
+      <a href="admin-users.html" class="cancel-btn">Отмена</a>
+    </form>
+
+    <!-- сюда JS добавит сообщение об успехе или ошибке -->
+    <p id="formMessage" class="form-message"></p>
+  </div>
+
+  <script src="./static/admin-add-user.js"></script>
+</main>
+</body>
+</html>

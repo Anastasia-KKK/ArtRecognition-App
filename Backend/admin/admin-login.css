@@ -1,0 +1,92 @@
+/* Общий фон */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f7f7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Контейнер */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+}
+
+/* Заголовок */
+.login-box h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 28px;
+}
+
+/* Форма */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.login-form label {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+}
+
+/* Кнопка */
+button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #253fa3;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px;
+  }
+}

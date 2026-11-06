@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель</title>
+  <link rel="stylesheet" href="admin-style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Администратор</h2>
+    <nav>
+      <ul>
+        <li><a href="admin-dashboard.html" class="active">Главная</a></li>
+        <li><a href="admin-users.html">Пользователи</a></li>
+        <li><a href="admin-analytics.html">Аналитика</a></li>
+        <li><a href="admin-login.html">Выход</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Общая статистика</h1>
+    <div class="cards">
+      <div class="card">
+        <h3>Пользователи</h3>
+        <p id="usersCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Картины</h3>
+         <p id="artworksCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Избранные</h3>
+        <p id="favoritesCount">0</p>
+      </div>
+    </div>
+    <section class="table-block">
+  <h2>Последние добавленные картины</h2>
+  <table class="user-table" id="recentArtworksTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Изображение</th>
+        <th>Название</th>
+        <th>Автор</th>
+        <th>Год</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="5">Загрузка...</td></tr>
+    </tbody>
+  </table>
+</section>
+  </main>
+  <script src="./static/admin-dashboard.js"></script>
+</body>
+</html>

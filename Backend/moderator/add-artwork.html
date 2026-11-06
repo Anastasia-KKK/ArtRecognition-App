@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Добавить картину</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="dashboard-dark">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="avatar"></div>
+      <div class="moderator-info">
+        <h3>Модератор</h3>
+        <p id="moderatorName">—</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="side-btn">Назад</a>
+      <button class="side-btn logout-btn">Выйти</button>
+    </nav>
+  </aside>
+
+  <main class="dashboard-content">
+    <div class="upload-container">
+      <h1>Добавить картину</h1>
+      <p class="upload-subtitle">Введите данные о картине. Поля можно оставить пустыми.</p>
+
+      <form id="uploadForm" class="upload-form">
+        <div class="upload-fields">
+          <label>
+            Название картины
+            <input type="text" id="title" placeholder="Введите название" required />
+          </label>
+
+          <label>
+            Название (EN)
+            <input type="text" id="title_en" placeholder="English title (опционально)" />
+          </label>
+
+          <label>
+            Автор (ID)
+            <input type="number" id="author_id" placeholder="Введите ID автора" />
+          </label>
+
+          <label>
+            Год создания
+            <input type="text" id="year" placeholder="Например: 1889" />
+          </label>
+
+          <label>
+            Материал
+            <input type="text" id="material" placeholder="Холст, масло..." />
+          </label>
+
+          <label>
+            Материал (EN)
+            <input type="text" id="material_en" placeholder="Canvas, oil... (опционально)" />
+          </label>
+
+          <label>
+            Размер
+            <input type="text" id="size" placeholder="60×80 см" />
+          </label>
+
+          <label>
+            Размер (EN)
+            <input type="text" id="size_en" placeholder="Size in English (опционально)" />
+          </label>
+
+          <label>
+            Описание
+            <textarea id="description" placeholder="Описание картины..."></textarea>
+          </label>
+
+          <label>
+            Description (EN)
+            <textarea id="description_en" placeholder="Description in English..."></textarea>
+          </label>
+
+          <label>
+            История создания
+            <textarea id="creation_history" placeholder="Кратко об истории создания..."></textarea>
+          </label>
+
+          <label>
+            Creation History (EN)
+            <textarea id="creation_history_en" placeholder="History in English..."></textarea>
+          </label>
+
+          <label>
+            Ссылка на изображение
+            <input type="url" id="image" placeholder="https://example.com/art.jpg" required />
+          </label>
+        </div>
+
+        <button type="submit" class="publish-btn">Добавить картину</button>
+        <p id="message" class="form-message"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="scripts/add-artwork.js"></script>
+</body>
+</html>

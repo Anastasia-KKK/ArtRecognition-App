@@ -1,0 +1,364 @@
+/* ----------- Общие стили ----------- */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f5f6f7;
+  color: #222;
+  display: flex;
+}
+
+/* ----------- Боковая панель ----------- */
+.sidebar {
+  width: 230px;
+  background: #1e3a8a;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+  color: #dce2ff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #2c4cb2;
+  color: #fff;
+}
+
+/* ----------- Контентная часть ----------- */
+.content {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.content h1 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ----------- Карточки статистики ----------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #1e3a8a;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #111;
+}
+
+/* ----------- Таблицы пользователей ----------- */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  text-align: left;
+}
+
+.user-table thead {
+  background: #1e3a8a;
+  color: white;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 18px;
+}
+
+.user-table th:first-child,
+.user-table td:first-child {
+  width: 80px; /* столбец ID */
+}
+
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  width: 200px; /* Имя */
+}
+
+.user-table th:nth-child(3),
+.user-table td:nth-child(3) {
+  width: 280px; /* Email */
+}
+
+.user-table th:nth-child(4),
+.user-table td:nth-child(4) {
+  width: 180px; /* Роль */
+}
+
+.user-table th:nth-child(5),
+.user-table td:nth-child(5) {
+  text-align: right; /* действия справа */
+  width: 160px;
+}
+
+.user-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.user-table tr:last-child {
+  border-bottom: none;
+}
+
+/* ----------- Кнопки ----------- */
+.btn {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn.add-user {
+  background: #1e3a8a;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn.add-user:hover {
+  background: #2c4cb2;
+}
+
+.btn.delete {
+  background: #d9534f;
+  color: #fff;
+}
+
+.btn.delete:hover {
+  background: #c13b38;
+}
+
+.btn.disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* ----------- Заголовок страницы пользователей ----------- */
+.users-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.users-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== СТРАНИЦА ДОБАВЛЕНИЯ ПОЛЬЗОВАТЕЛЯ ===== */
+
+.upload-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  max-width: 700px;
+  margin: 60px auto;
+}
+
+.upload-container h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.upload-subtitle {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.upload-fields label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: #333;
+}
+
+.upload-fields input,
+.upload-fields select {
+  width: 100%;
+  padding: 5px 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 15px;
+  transition: border-color 0.2s, background-color 0.2s;
+  background-color: #fafafa;
+  height: 48px; /* добавляем одинаковую высоту */
+}
+
+.upload-fields input:focus,
+.upload-fields select:focus {
+  border-color: #111;
+  outline: none;
+  background-color: #fff;
+}
+
+.publish-btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  padding: 11px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  border: none;
+}
+
+.cancel-btn {
+  width: 97%;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  padding: 11px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  border: none;
+}
+
+.publish-btn {
+  background-color: #1e3a8a;
+  color: white;
+  margin-top: 25px;
+}
+
+.publish-btn:hover {
+  background-color: #2c4cb2;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+/* ===== СТРАНИЦА АНАЛИТИКИ ===== */
+
+.analytics-header {
+  margin-bottom: 25px;
+}
+
+.analytics-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.analytics-subtitle {
+  color: #666;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Таблицы в аналитике */
+.table-block {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  padding: 25px;
+   margin-top: 40px;
+}
+
+.table-block h2 {
+  color: #1e3a8a;
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.user-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-table tr:hover {
+  background: #f9fafc;
+}
+
+.user-table td:last-child {
+  font-weight: 600;
+  color: #1e3a8a;
+}
